@@ -2,12 +2,11 @@ import java.sql.*;
 import java.util.*;
 
 
-public class javaTodo {
+public class javatodo {
     static String changeDB = "0";
-    // Change below 2 lines
-    static String DBurl = "jdbc:derby:D:\\Work\\Java\\Projects\\JavaTodo\\Tasks\\Database";
-    static String DBclose = "jdbc:derby:D:\\Work\\Java\\Projects\\JavaTodo\\Tasks\\Database;shutdown=true";
-    // Chnage above 2 lines
+    // Doesn't work directly check README.md pre-requests to get it started.
+    static String DBurl = "jdbc:derby:D:\\Work\\Java\\Projects\\JavaTodo\\Database";
+    static String DBclose = "jdbc:derby:D:\\Work\\Java\\Projects\\JavaTodo\\Database;shutdown=true";
     static String callfrom = "0";
     static void todo_screen() {
         System.out.println("--------------------");
@@ -97,7 +96,7 @@ public class javaTodo {
                 query = "insert into todo2 (task) values ('" + task + "')";
             }
             stmnt.execute(query);
-            System.out.println("Task saved in database");
+            // System.out.println("Task saved in database");
             DriverManager.getConnection(DBclose);
         } catch (Exception e) {
         }
