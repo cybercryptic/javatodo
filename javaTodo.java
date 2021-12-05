@@ -100,6 +100,7 @@ public class javatodo {
             DriverManager.getConnection(DBclose);
         } catch (Exception e) {
         }
+        todo_screen();
     }
 
     public static void main(String[] args) {
