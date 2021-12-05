@@ -5,8 +5,8 @@ import java.util.*;
 public class javatodo {
     static String changeDB = "0";
     // Doesn't work directly check README.md pre-requests to get it started.
-    static String DBurl = "jdbc:derby:D:\\Work\\Java\\Projects\\JavaTodo\\Database";
-    static String DBclose = "jdbc:derby:D:\\Work\\Java\\Projects\\JavaTodo\\Database;shutdown=true";
+    static String DBurl = "jdbc:derby:[Database location]";
+    static String DBclose = "jdbc:derby:[Database location];shutdown=true";
     static String callfrom = "0";
     static void todo_screen() {
         System.out.println("--------------------");
@@ -99,11 +99,6 @@ public class javatodo {
             // System.out.println("Task saved in database");
             DriverManager.getConnection(DBclose);
         } catch (Exception e) {
-        }
-        if (callfrom == "gui") {
-            System.out.println("Got from gui");
-        } else {
-            todo_screen();
         }
     }
 
